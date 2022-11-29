@@ -5,10 +5,10 @@ import styles from './Calculator.module.css';
 class CalculatorInput extends React.PureComponent {
 render=() => {
   const { value } = this.props;
-  return <input type="number" className={styles.input} value={value} />;
+  return <input type="text" className={styles.input} value={value} />;
 }
 }
-CalculatorInput.defaultProps = { value: 0 };
-CalculatorInput.propTypes = { value: PropTypes.number };
+CalculatorInput.defaultProps = { value: '0' };
+CalculatorInput.propTypes = { value: PropTypes.string };
 
 export default CalculatorInput;
