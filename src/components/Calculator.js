@@ -24,7 +24,7 @@ export default class Calculator extends React.PureComponent {
     const { total, operation, next } = this.state;
     return (
       <div id="calculator" className={styles.calculator}>
-        <CalculatorInput value={`${total} ${next} ${operation}`} />
+        <CalculatorInput value={`${total || ''} ${operation || ''} ${next || ''}`} />
         <CalculatorButton onClick={this.handleClick} classn="btnAC " value="AC" />
         <CalculatorButton onClick={this.handleClick} classn="btnSigns " value="+/-" />
         <CalculatorButton onClick={this.handleClick} classn="btn% " value="%" />
