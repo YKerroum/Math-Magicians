@@ -5,11 +5,14 @@ import styles from './Calculator.module.css';
 import calculate from '../logic/calculate';
 
 const Calculator = () => {
-  const [object, setState] = useState(null);
+  const [object, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
   const { total, next, operation } = object;
   const handleClick = (e) => {
     const elements = calculate(object, e.target.innerHTML);
-    console.log(elements);
     setState(elements);
   };
 
