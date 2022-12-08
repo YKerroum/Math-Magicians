@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import CalculatorPage from './pages/CalculatorPage';
 import Home from './pages/Home';
 import Quote from './pages/Quote';
@@ -10,15 +10,30 @@ const App = () => (
       <div id="logo">Math Magicians</div>
       <ul>
         <li>
-          <Link className="Links" to="/">Home</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'activeLink' : undefined)}
+            to="/"
+          >
+            Home
+          </NavLink>
         </li>
         <li>&#124;</li>
         <li>
-          <Link className="Links" to="/calculator">Calculator</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'activeLink' : undefined)}
+            to="/calculator"
+          >
+            Calculator
+          </NavLink>
         </li>
         <li>&#124;</li>
         <li>
-          <Link className="Links" to="/quote">Quote</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'activeLink' : undefined)}
+            to="/quote"
+          >
+            Quote
+          </NavLink>
         </li>
       </ul>
     </nav>
