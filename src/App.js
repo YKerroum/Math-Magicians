@@ -10,28 +10,19 @@ const App = () => (
       <div id="logo">Math Magicians</div>
       <ul>
         <li>
-          <NavLink
-            className={({ isActive }) => (isActive ? 'activeLink' : undefined)}
-            to="/"
-          >
+          <NavLink to="/">
             Home
           </NavLink>
         </li>
         <li>&#124;</li>
         <li>
-          <NavLink
-            className={({ isActive }) => (isActive ? 'activeLink' : undefined)}
-            to="/calculator"
-          >
+          <NavLink to="/calculator">
             Calculator
           </NavLink>
         </li>
         <li>&#124;</li>
         <li>
-          <NavLink
-            className={({ isActive }) => (isActive ? 'activeLink' : undefined)}
-            to="/quote"
-          >
+          <NavLink to="/quote">
             Quote
           </NavLink>
         </li>

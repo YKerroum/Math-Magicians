@@ -29,14 +29,19 @@ nav ul {
   font-size: 20px;
 }
 
-a {
+nav a {
+  display: inline-block;
   color: #000;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-.activeLink {
+nav a:hover {
+  transform: scale(1.1);
+}
+
+.active {
   color: brown;
 }
 
